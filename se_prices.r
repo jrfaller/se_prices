@@ -1,20 +1,20 @@
-pdf()
+pdf(file="se_prices.pdf")
 
 years <- 2010:2014
 
-data <- read.csv("se_price.csv",colClasses=c("character","integer","integer","integer"))
+data <- read.csv("se_prices.csv",colClasses=c("character","integer","integer","integer"))
 conferences <- unique(data$conference)
+colors = rainbow(length(conferences))
 prices = c()
 for(conference in conferences) {
-	late_full_regular <- data$late_full_regular[data$conference==conference]
-	prices <- cbind(prices, late_full_regular)
+	early_regular <- data$early_regular[data$conference==conference]
+	prices <- cbind(prices, early_regular)
 }
 
-years
-prices[,1]
-
-plot(years,prices[,1],ylim=c(0,2000),type="l")
+plot(years, prices[,1], main="Evolution of prices of major SE conferences", xlab="Year", ylab="Price (eur)", ylim=c(0,2000), type="o", col=colors[1], pch=1)
 
 for (i in 2:length(conferences)) {
-	lines(years,prices[,i])
+	points(years,prices[,i], type="o", col=colors[i], pch=i)
 }
+
+legend(2013, 2000, conferences, lty=1, col=colors, pch=1:length(conferences))

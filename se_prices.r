@@ -11,7 +11,7 @@ for(conference in conferences) {
 	prices <- cbind(prices, early_regular)
 }
 
-plot(years, prices[,1], main="Evolution of prices of major SE conferences", xlab="Year", ylab="Price (eur)", ylim=c(0,2000), type="o", col=colors[1], pch=1)
+plot(years, prices[,1], main="Evolution of Prices of Major Software Engineering Conferences", xlab="Year", ylab="Price (EUR)", ylim=c(0,2000), type="o", col=colors[1], pch=1)
 
 for (i in 2:length(conferences)) {
 	points(years,prices[,i], type="o", col=colors[i], pch=i)

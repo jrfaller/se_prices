@@ -1,4 +1,4 @@
-pdf(file="se_prices.pdf")
+svg(file="se_prices.svg")
 
 data <- read.csv("se_prices.csv",colClasses=c("character","integer","integer","integer"))
 years <- unique(data$year)

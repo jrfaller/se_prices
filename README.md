@@ -14,6 +14,7 @@ At the moment, we observe the following conferences
 * ASE
 * ICSE
 * OOPSLA/SPLASH
+* ESEC/FSE
 
 We still have some missing values, so if you know the missing prices, please contact us.
 

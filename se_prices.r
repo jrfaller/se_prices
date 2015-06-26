@@ -1,8 +1,7 @@
 pdf(file="se_prices.pdf")
 
-years <- 2010:2014
-
 data <- read.csv("se_prices.csv",colClasses=c("character","integer","integer","integer"))
+years <- unique(data$year)
 conferences <- unique(data$conference)
 colors = rainbow(length(conferences))
 

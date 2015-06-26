@@ -18,3 +18,13 @@ At the moment, we observe the following conferences
 We still have some missing values, so if you know the missing prices, please contact us.
 
 If you want to add a major software engineering conference, please do! Just fork our repository, modify the CSV file, and make a pull request.
+
+## The graphs
+
+### Early regular price
+
+![Price of software engineering conferences](https://raw.githubusercontent.com/jrfaller/se_prices/master/se_prices_reg.png)
+
+### Early student price
+
+![Price of software engineering conferences](https://raw.githubusercontent.com/jrfaller/se_prices/master/se_prices_stu.png)

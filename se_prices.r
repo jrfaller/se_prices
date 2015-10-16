@@ -1,37 +1,34 @@
+library(reshape2)
+library(ggplot2)
+
+prices <- read.csv("se_prices.csv",colClasses=c("character","integer","integer","integer"))
+
 png(file="se_prices_reg.png")
 
-data <- read.csv("se_prices.csv",colClasses=c("character","integer","integer","integer"))
-years <- unique(data$year)
-conferences <- unique(data$conference)
-colors = rainbow(length(conferences))
-
-early_regulars = c()
-early_students = c()
-for(conference in conferences) {
-	early_regular <- data$early_regular[data$conference==conference]
-	early_student <- data$early_student[data$conference==conference]
-	early_regulars <- cbind(early_regulars, early_regular)
-	early_students <- cbind(early_students, early_student)
-}
-
-plot(years, early_regulars[,1], main="Evolution of Prices of Major SE Conferences: Early Regular", xlab="Year", ylab="Price (EUR)", ylim=c(0,2000), type="o", col=colors[1], pch=1)
-
-for (i in 2:length(conferences)) {
-	points(years, early_regulars[,i], type="o", col=colors[i], pch=i)
-}
-
-legend(2013, 2000, conferences, lty=1, col=colors, pch=1:length(conferences))
+ggplot(data = prices, aes(x=year, y=early_regular, colour=conference, shape=conference)) +
+		geom_point() +
+		geom_smooth() +
+		ggtitle("Full conference price for a regular early registration.") +
+		xlab("Year") +
+		ylab("Price (EUR)") +
+		theme_bw() +
+		scale_colour_discrete(name="Conference") +
+		scale_shape_discrete(name="Conference") +
+		guides(color=guide_legend(override.aes=list(fill=NA)))
 
 dev.off()
 
 png(file="se_prices_stu.png")
 
-plot(years, early_students[,1], main="Evolution of Prices of Major SE Conferences: Early Student", xlab="Year", ylab="Price (EUR)", ylim=c(0,1500), type="o", col=colors[1], pch=1)
-
-for (i in 2:length(conferences)) {
-	points(years, early_students[,i], type="o", col=colors[i], pch=i)
-}
-
-legend(2013, 1500, conferences, lty=1, col=colors, pch=1:length(conferences))
+ggplot(data = prices, aes(x=year, y=early_student, colour=conference, shape=conference)) +
+		geom_point() +
+		geom_smooth() +
+		ggtitle("Full conference price for a student early registration.") +
+		xlab("Year") +
+		ylab("Price (EUR)") +
+		theme_bw() +
+		scale_colour_discrete(name="Conference") +
+		scale_shape_discrete(name="Conference") +
+		guides(color=guide_legend(override.aes=list(fill=NA)))
 
 dev.off()

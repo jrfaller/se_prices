@@ -7,7 +7,7 @@ png(file="se_prices_reg.png")
 
 ggplot(data = prices, aes(x=year, y=early_regular, colour=conference, shape=conference)) +
 		geom_point() +
-		geom_smooth() +
+		geom_line() +
 		ggtitle("Full conference price for a regular early registration.") +
 		xlab("Year") +
 		ylab("Price (EUR)") +
@@ -22,7 +22,7 @@ png(file="se_prices_stu.png")
 
 ggplot(data = prices, aes(x=year, y=early_student, colour=conference, shape=conference)) +
 		geom_point() +
-		geom_smooth() +
+		geom_line() +
 		ggtitle("Full conference price for a student early registration.") +
 		xlab("Year") +
 		ylab("Price (EUR)") +

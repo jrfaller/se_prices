@@ -12,6 +12,7 @@ ggplot(data = prices, aes(x=year, y=early_regular, colour=conference, shape=conf
 		ggtitle("Full conference price for a regular early registration.") +
 		xlab("Year") +
 		ylab("Price (EUR)") +
+		ylim(0,1000) +
 		theme_bw() +
 		scale_x_discrete(limits=years) + 
 		scale_colour_discrete(name="Conference") +
@@ -28,6 +29,7 @@ ggplot(data = prices, aes(x=year, y=early_student, colour=conference, shape=conf
 		ggtitle("Full conference price for a student early registration.") +
 		xlab("Year") +
 		ylab("Price (EUR)") +
+		ylim(0,1000) +
 		theme_bw() +
 		scale_x_discrete(limits=years) + 
 		scale_colour_discrete(name="Conference") +

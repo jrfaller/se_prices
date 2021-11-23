@@ -16,7 +16,7 @@ plot_fees <- function(fees, title, y_axis, filename) {
         ylab("Price (€)") +
         ylim(0, 1000) +
         theme_bw() +
-        scale_x_discrete(limits = years) +
+        scale_x_continuous(breaks = years) +
         scale_colour_discrete(name = "Conference") +
         scale_shape_discrete(name = "Conference") +
         guides(color = guide_legend(override.aes = list(fill = NA)))

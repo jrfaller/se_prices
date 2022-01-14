@@ -4,7 +4,7 @@ This project aims at displaying the trends of fees for several major software en
 
 ## Methodology
 
-Registration fees are recorded over the years in a CSV file, and a R script produces charts exhibiting the trends.
+Registration fees are recorded over the years in a CSV file, and a Python script produces charts exhibiting the trends.
 
 We record the fees for the full conference, for a IEEE or ACM non-member, for an early registration. The rationale for this choice is that this is the fee a random researcher is most likely to pay to present its paper. All fees are in euros (as converted on the June 4, 2014) for conferences before June 2014 and using the exchange rate at the time of the introducting commit for conferences after June 2014.
 

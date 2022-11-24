@@ -6,7 +6,7 @@ This project aims at displaying the trends of fees for several major software en
 
 Registration fees are recorded over the years in a CSV file, and a Python script produces charts exhibiting the trends.
 
-We record the fees for the full conference, for a IEEE or ACM non-member, for an early registration. The rationale for this choice is that this is the fee a random researcher is most likely to pay to present its paper. All fees are in euros (as converted on the June 4, 2014) for conferences before June 2014 and using the exchange rate at the time of the introducting commit for conferences after June 2014.
+We record the fees for the full conference, for a IEEE or ACM non-member, for an early registration. If it is possible for an author to present virtually, we retain the virtual registration fees. The rationale for these choices is that this is the minimum fee a random researcher must pay to present its paper. All fees are in euros (as converted on the June 4, 2014) for conferences before June 2014 and using the exchange rate at the time of the introducting commit for conferences after June 2014.
 
 At the moment, we observe the following conferences:
 

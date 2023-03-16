@@ -16,6 +16,7 @@ def plot_fees(fees, title, y_axis, years, filename):
         pn.labs(title = title, x = 'Year', y = 'Fee (€)') + \
         pn.ylim(0, 1000) + \
         pn.theme_light() + \
+        pn.theme(axis_text_x = pn.element_text(rotation = 90)) + \
         pn.scale_x_continuous(breaks = years) + \
         pn.scale_colour_discrete(name = 'Conference') + \
         pn.scale_shape_discrete(name = 'Conference')
@@ -24,3 +25,5 @@ def plot_fees(fees, title, y_axis, years, filename):
 
 if __name__ == "__main__":
     main()
+
+    

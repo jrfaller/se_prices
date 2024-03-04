@@ -14,7 +14,7 @@ def plot_fees(fees, title, y_axis, years, filename):
         pn.geom_point() + \
         pn.geom_line() + \
         pn.labs(title = title, x = 'Year', y = 'Fee (€)') + \
-        pn.ylim(0, 1000) + \
+        pn.ylim(0, 1200) + \
         pn.theme_light() + \
         pn.theme(axis_text_x = pn.element_text(rotation = 90)) + \
         pn.scale_x_continuous(breaks = years) + \

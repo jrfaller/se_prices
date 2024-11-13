@@ -17,7 +17,9 @@ At the moment, we observe the following conferences:
 
 We still have some missing values, so if you know the missing fees, please contact us. Additionally, there might be mistakes so do not hesitate to post an issue or make a pull request if you think this is the case.
 
-## The graphs
+## The analysis
+
+The complete analysis of the data can be found on our [notebook](https://raw.githubusercontent.com/jrfaller/se_prices/master/se_prices.ipynb).
 
 ### Early regular fees
 

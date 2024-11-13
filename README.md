@@ -19,7 +19,7 @@ We still have some missing values, so if you know the missing fees, please conta
 
 ## The analysis
 
-The complete analysis of the data can be found on our [notebook](https://raw.githubusercontent.com/jrfaller/se_prices/master/se_prices.ipynb).
+The complete analysis of the data can be found on our [notebook](https://github.com/jrfaller/se_prices/blob/main/se_prices.ipynb).
 
 ### Early regular fees
 

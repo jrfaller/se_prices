@@ -28,3 +28,14 @@ The complete analysis of the data can be found on our [notebook](https://github.
 ### Early student fees
 
 ![Price of software engineering conferences](https://raw.githubusercontent.com/jrfaller/se_prices/master/se_prices_stu.png)
+
+## Regenerating the notebook
+
+To run the notebook and regenerate the pictures, you can use [`uv`](https://docs.astral.sh/uv/):
+
+```bash
+uv run --with nbconvert jupyter nbconvert --to notebook --execute --inplace se_prices.ipynb
+```
+
+Alternatively, you can open `se_prices.ipynb` in any editor supporting Jupyter notebooks (e.g., VS Code or JupyterLab) and run all cells.
+
